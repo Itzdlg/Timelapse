@@ -1,6 +1,6 @@
 # Timelapse
 
-Timelapse is an abstraction and plugin, similar to the Hypixel Replay System, that will record certain areas or players, under certain conditions, then send the events back to staff members or players with permission to review recordings.
+Timelapse is an abstraction and plugin, acting similarly to the Hypixel Replay System, that will record certain areas or players, under certain conditions, then send the events back to staff members or players with permission to review recordings.
 
 Currently, the project is still under development. The plugin will be released once a working Spigot plugin has been developed, along with the abstraction in the `common` module.
 
@@ -10,13 +10,15 @@ Currently, the project is still under development. The plugin will be released o
 
 `spigot` - Implementation of the Timelapse Spigot plugin for versions 1.8 to 1.18.
 
-*Other implementations are welcomed*
+*Other implementations are welcomed.*
 
 ## Contributions
 
+### License
+
 All code is under the GNU GPLv3 License available in the LICENSE.txt file and at https://www.gnu.org/licenses/gpl-3.0.en.html.
 
-Contributions to source code must include the copying notice at the beginning of each source file in comments:
+Contributions to source code must include the copying notice at the beginning of each source file in multi-line comments:
 ```java
 /*
  * This file is part of Timelapse.
@@ -39,20 +41,26 @@ Contributions to source code must include the copying notice at the beginning of
  */
 ```
 
-Javadoc `@author` tags should be exactly `Timelapse Team and contributors`, if included.
-
 ### Branches
 
-`master` - Most recent, tested, source.
+`master` - Most recent and tested source code.
 
-`stable` - Releases determined to be stable (major versions).
+`stable` - Releases determined to be stable and significant.
 
-`fix/<short description>` - Actively worked-on fixes to source code.
+`fix/<short description>` - Unfinished bug fixes for reported issues.
 
-`feat/<short description>` - Actively worked-on features to source code.
+`feat/<short description>` - Unfinished feature or unit test implementations or changes.
 
-`docs/<short description>` - Actively worked-on documentation changes.
+`docs/<short description>` - Unfinished documentation changes.
 
 ### Versioning
 
-Until pushed to `master`, the version should not be updated. Timelapse uses Semantic Versioning, which is available at https://semver.org.
+Timelapse uses Semantic Versioning, which is available at https://semver.org.
+
+Until pushed to `master`, the version should not be updated.
+
+### Commits
+
+Timelapse uses Conventional Commits, which is available at https://www.conventionalcommits.org/en/v1.0.0/. 
+
+Commits to any branch other than `master` and `stable` do not need to include the commit prefix (e.g. `docs:` or `feat:`). Once pushed to `master`, the branch will be squash-merged and include the commit prefix in the merge commit.
