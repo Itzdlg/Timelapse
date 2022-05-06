@@ -1,6 +1,3 @@
-# This workflow will build a Java project with Maven, and cache/restore any dependencies to improve the workflow execution time
-# For more information see: https://help.github.com/actions/language-and-framework-guides/building-and-testing-java-with-maven
-
 name: Deploy With Maven
 on:
   push:
@@ -8,6 +5,10 @@ on:
 
 jobs:
   deploy:
+    if: >-
+      ${{ !startsWith(github.event.head_commit.message, 'docs:')
+      && !startsWith(github.event.head_commit.message, 'style:')
+      && !startsWith(github.event.head_commit.message, 'ci:') }}
     runs-on: self-hosted
     steps:
       - uses: actions/checkout@v2

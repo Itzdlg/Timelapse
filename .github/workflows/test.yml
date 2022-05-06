@@ -6,7 +6,11 @@ on: [ push, pull_request ]
 
 jobs:
   build:
-    runs-on: self-hosted
+    if: >-
+      ${{ !startsWith(github.event.head_commit.message, 'docs:')
+      && !startsWith(github.event.head_commit.message, 'style:')
+      && !startsWith(github.event.head_commit.message, 'ci:') }}
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
       - name: Set up JDK 8
