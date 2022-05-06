@@ -52,12 +52,12 @@
 
     <distributionManagement>
         <repository>
-            <id>timelapse@nexus.schooltests.me</id>
+            <id>github</id>
             <name>Maven Release Repository</name>
             <url>https://nexus.schooltests.me/repository/maven-releases/</url>
         </repository>
         <snapshotRepository>
-            <id>timelapse@nexus.schooltests.me</id>
+            <id>github</id>
             <name>Maven Snapshot Repository</name>
             <url>https://nexus.schooltests.me/repository/maven-snapshots/</url>
         </snapshotRepository>
