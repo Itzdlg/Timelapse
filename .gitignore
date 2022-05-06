@@ -1,0 +1,6 @@
+# IDE & Project Directories
+.idea/**
+
+# Module Build Directories
+common/target/**
+spigot/target/**
